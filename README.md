@@ -1,19 +1,21 @@
 ## 安装python3.5
+```
 wget https://www.python.org/ftp/python/3.5.3/Python-3.5.3.tar.xz
 xz -d Python-3.5.3.tar.xz
 tar xvf Python-3.5.3.tar
-
+```
+```
 cd Python-3.5.3
 ./configure --prefix=/usr/local/python3.5 --enable-shared
 make && make install
 ln -s /usr/local/python3.5/bin/python3.5 /usr/bin/python3
-
+```
 1. /etc/ld.so.conf下面加一行/usr/local/python3.5/lib/
 
 2. 保存后执行 ldconfig  生效
-
+```
 python3 -V
-
+```
 Windows环境
 > 创建Python3的venv虚拟环境
 >> python3 -m venv .
@@ -32,7 +34,7 @@ Windows环境
 
 > 退出
 >> (robot) [root@iz2ze2vve1jzbburujx43pz robot]>deactivate
-
+```
 cp /usr/src/wxjqr/wxjqr.service /usr/lib/systemd/system/wxjqr.service
 
 chmod 754 /usr/lib/systemd/system/wxjqr.service
@@ -46,3 +48,4 @@ systemctl daemon-reload
 systemctl start wxjqr.service
 systemctl stop wxjqr.service
 systemctl reload wxjqr.service
+```
